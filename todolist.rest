@@ -1,0 +1,30 @@
+### Create a new TODO
+POST http://localhost:8080/todos
+Content-Type: application/json
+
+{
+  "name": "Todo 1",
+  "description": "Desc Todo 1",
+  "priority": 1
+}
+
+
+### Get all TODO
+GET http://localhost:8080/todos
+#Accept: application/json
+
+
+### Update a TODO
+PUT http://localhost:8080/todos/1
+Content-Type: application/json
+
+{
+  "id": 1,
+  "name": "Todo 1 Up",
+  "description": "Desc Todo 1 up",
+  "priority": 2
+}
+
+
+### DELETE TODO
+DELETE http://localhost:8080/todos/1
