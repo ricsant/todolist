@@ -29,14 +29,16 @@ public class TodoService {
 
     public List<Todo> update(Long id, Todo todo) {
         todoRepository.findById(id).ifPresentOrElse((existingTodo) -> {
-            todo.setId(id);
-            todoRepository.save(todo);
+            existingTodo.setName(todo.getName());
+            existingTodo.setDescription(todo.getDescription());
+            existingTodo.setDone(todo.isDone());
+            existingTodo.setPriority(todo.getPriority());
+            todoRepository.save(existingTodo);
         }, () -> {
-            throw new BadRequestException("Todo %d não existe! ".formatted(id));
+            throw new BadRequestException("Todo %d não existe!".formatted(id));
         });
 
         return list();
-
     }
 
     public List<Todo> delete(Long id) {

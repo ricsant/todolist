@@ -2,7 +2,6 @@ package com.ricardosaraiva.todolist.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
-import lombok.Generated;
 
 @Entity
 @Table(name="todos")

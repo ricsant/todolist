@@ -3,9 +3,9 @@ POST http://localhost:8080/todos
 Content-Type: application/json
 
 {
-  "name": "Todo 1",
-  "description": "Desc Todo 1",
-  "priority": 1
+  "name": "Novo",
+  "description": "Desc Todo Novo",
+  "priority": 2
 }
 
 
@@ -15,14 +15,14 @@ GET http://localhost:8080/todos
 
 
 ### Update a TODO
-PUT http://localhost:8080/todos/1
+PUT http://localhost:8080/todos/2
 Content-Type: application/json
 
 {
-  "id": 1,
-  "name": "Todo 1 Up",
-  "description": "Desc Todo 1 up",
-  "priority": 2
+  "id": 2,
+  "name": "teste ricardo",
+  "description": "update",
+  "priority": 1
 }
 
 
