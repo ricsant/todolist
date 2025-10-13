@@ -2,6 +2,7 @@ package com.ricardosaraiva.todolist.controller;
 
 import com.ricardosaraiva.todolist.entity.Todo;
 import com.ricardosaraiva.todolist.service.TodoService;
+import jakarta.validation.Valid;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,7 +19,7 @@ public class TodoController {
     }
 
     @PostMapping
-    public ResponseEntity<List<Todo>> create(@RequestBody Todo todo) {
+    public ResponseEntity<List<Todo>> create(@RequestBody @Valid Todo todo) {
         return ResponseEntity.ok(todoService.create(todo));
     }
 
